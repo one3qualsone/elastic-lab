@@ -1,0 +1,12 @@
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - FLASK_APP=app
+      - FLASK_ENV=development
